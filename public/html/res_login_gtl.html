@@ -1,13 +1,160 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<title>Document</title>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="这是我们的音乐聚集地,i音乐"/>
+		<meta name="copyright" content="MyTeam"/>
+		<title>music</title>
+		<link rel="stylesheet" href="../stylesheets/gtl.css" />
+		<script src="../javascripts/jquery-2.1.4.min.js"></script>
 	</head>
-
 	<body>
-
+		<!--login and register-->
+		
+		<div class="header">
+			<button class="login-btn">登陆</button><button class="register-btn">注册</button>
+		</div>
+		<!--遮罩层-->
+		<div class="mask">
+			<!--login-with-->
+			<div class="login-with">
+				<!--model-header-->
+				<div class="model-header">
+					<button class="close">&times;</button>
+					<h4>Login with</h4>
+				</div>
+				<!--model-body-->
+				<div class="model-body">
+					<div class="body-box">
+						<!--icon-->
+						<div class="body-icon">
+							<a href="javascript:;"><img src="../images/CloudMusic.jpg" title="CloudMusic"/></a>
+							<a href="javascript:;"><img src="../images/QQMusic_.jpg" title="QQMusic_"/></a>
+							<a href="javascript:;"><img src="../images/Sing.jpg" title="Sing"/></a>
+						</div>
+						<!--hr-->
+						<div class="hr">
+							<div class="line-left"></div>
+							or
+							<div class="line-right"></div>
+						</div>
+						<!--error-->
+						<div class="error">Invalid username/password combination</div>
+						<!--form-->
+						<div class="login-form">
+							<form>
+								<input type="text" placeholder="Tel/username" class="form-input username"/>
+								<input type="password" placeholder="Password" class="form-input password"/>
+								<input type="button" value="LOGIN" class="login-in"/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--model-footer-->
+				<div class="model-footer">
+					Looking to <a href="javascript:;" class="create_">create an account</a> ?
+				</div>
+			</div>
+			<!--register-with-->
+			<div class="register-with">
+				<!--model-header-->
+				<div class="model-header">
+					<button class="close">&times;</button>
+					<h4>Register with</h4>
+				</div>
+				<!--model-body-->
+				<div class="model-body">
+					<div class="body-box">
+						<!--icon-->
+						<div class="body-icon">
+							<a href="javascript:;"><img src="../images/CloudMusic.jpg" title="CloudMusic"/></a>
+							<a href="javascript:;"><img src="../images/QQMusic_.jpg" title="QQMusic_"/></a>
+							<a href="javascript:;"><img src="../images/Sing.jpg" title="Sing"/></a>
+						</div>
+						<!--hr-->
+						<div class="hr">
+							<div class="line-left"></div>
+							or
+							<div class="line-right"></div>
+						</div>
+						<!--error-->
+						<div class="error">Invalid username/password combination</div>
+						<!--form-->
+						<div class="login-form">
+							<form>
+								<input type="text" placeholder="Tel/username" class="form-input register-username"/>
+								<input type="password" placeholder="Password" class="form-input register-password"/>
+								<input type="password" placeholder="Repeat Password" class="form-input repeat-password"/>
+								<input type="button" value="CREATE ACCOUNT" class="register-in"/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--model-footer-->
+				<div class="model-footer">
+					Already have an account? <a href="javascript:;" class="login_">Login</a>
+				</div>
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				//首页登陆：
+				$(".login-btn").click(function() {
+					$(".mask").css("display","block");
+					$(".register-with").css("display","none");
+					$(".login-with").css("display","block");
+				});
+				//首页注册：
+				$(".register-btn").click(function() {
+					$(".mask").css("display","block");
+					$(".login-with").css("display","none");
+					$(".register-with").css("display","block");
+				});
+				
+				//登陆按钮：
+				$(".login-in").click(function() {
+					var user = $(".username").val();
+					var pas = $(".password").val();
+					if(user == "" || pas == "") {
+						$(".error").css("display","block");
+					} else {
+						//ajax请求:
+					}
+				});
+				//注册按钮：
+				$(".register-in").click(function() {
+					var user = $(".register-username").val();
+					var pas = $(".register-password").val();
+					var rep = $(".repeat-password").val();
+					if(user == "" || pas == "" || rep == "") {
+						$(".error").css("display","block");
+					} else {
+						//ajax请求:
+					}
+				});
+				
+				//close:
+				$(".close").click(function() {
+					$(".mask").css("display","none");
+					$(".error").css("display","none");
+				});
+				
+				//在登陆页面跳转到注册：
+				$(".create_").click(function() {
+					$(".login-with").css("display","none");
+					$(".register-with").css("display","block");
+					$(".error").css("display","none");
+				});
+				//在注册页面跳转到登陆：
+				$(".login_").click(function() {
+					$(".register-with").css("display","none");
+					$(".login-with").css("display","block");
+					$(".error").css("display","none");
+				});
+				
+				
+			});
+		</script>
 	</body>
-
 </html>

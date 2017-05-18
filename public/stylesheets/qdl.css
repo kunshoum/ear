@@ -1,0 +1,190 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	/*font-family: 'Microsoft Yahei';*/
+}
+
+
+.swiper-container{
+	width: ;
+	height: ;
+	width:735px;
+	margin: auto;
+	overflow: hidden;
+}
+.qdl_content{
+	width: 100%;
+	overflow: hidden;
+}
+
+.qdl_banner{
+	width:735px;
+	margin: auto;
+	overflow: hidden;
+	/*border: 1px solid black;*/
+	padding-top: 10px;
+}
+.qdl_banner_top{
+	width: 288px;
+	height:288px ;
+	border-radius: 50%;
+	margin: auto; 
+	border: 8px solid white;
+	box-shadow: 0 0 8px 5px #e1e1e1;
+}
+.qdl_banner_bottom{
+	width: 100%;
+	overflow: hidden;
+	margin: 30px 0;
+	text-align: center;
+	font-size: 19px;
+}
+
+/*             content            */
+
+
+.qdl_text{
+	width: 1080px;
+	overflow: hidden;
+	margin: auto;
+}
+.qdl_text_onaly{
+	width: 100%;
+	height: 370px;
+	/*background:pink;*/
+}
+
+.qdl_banner_left{
+	width: 288px;
+	height:288px ;
+	border-radius: 50%;
+	float: left;
+	margin: 30px 0 0 30px;
+	border: 8px solid white;
+	box-shadow: 0 0 8px 5px #e1e1e1;
+}
+
+.qdl_banner_right{
+	margin: 30px 0 0 40px;
+	width: 700px;
+	height: 300px;
+	/*background: yellow;*/
+	float: left;
+}
+
+
+.qdl_banner_right>h3{
+	font-size: 28px;
+	font-weight: 500;
+	margin: 70px 0 30px 0;
+}
+
+.qdl_banner_right>p{
+	font-size: 19px;
+	color: #656565;
+}
+
+.qdl_content_bottom{
+	width: 100%;
+	height: 30px;
+	/*background: yellow;*/
+}
+.qdl_content_bottom>span{
+	font-size: 14px;
+}
+
+
+
+/*           联系我们             */
+
+.qdl_Contact{
+	width: 100%;
+	overflow: hidden;
+	padding: 100px 0;
+	background: #2c343b;
+}
+
+.qdl_Contact>h4{
+	font-size: 32px;
+	font-weight: 300;
+	color:white ;
+	text-align: center;
+}
+
+
+.qdl_Contact>p{
+	width: 980px;
+	height: 68px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	margin: 50px auto 30px;
+}
+
+
+.qdl_Contact_user{
+	width: 980px;
+	height: 233px;
+	margin: auto;
+}
+
+.qdl_Contact_user_left{
+	width: 460px;
+	height: 233px;
+	float: left;
+}
+.qdl_Contact_user_left>input{
+	width: 90%;
+	margin: auto;
+	font-size: 20px;
+	padding: 13px;
+	border: 0;
+	display:block;
+	margin: 17px 0;
+	border-radius: 5px; 
+	color: #888;
+	font-weight: 100;
+	outline: 0;
+}
+.qdl_Contact_user_right{
+	width: 460px;
+	height: 182px;
+	float: left;
+	background: white;
+	margin: 17px 0 0 0;
+	box-sizing: border-box;
+	padding: 20px;
+	color: #888;
+	border-radius: 5px; 
+}
+.qdl_button{
+	width: 133px;
+	height: 58px;
+	float: right;
+	color: white;
+	background: #58BEDF;
+	border-radius: 5px; 
+	margin: 20px 60px 0 0;
+	text-align: center;
+	line-height: 58px;
+	font-size:18px;
+}
+
+
+
+.qdl_loac{
+	width: 300px;
+	height: 40px;
+	margin:100px auto 0;
+}
+.qdl_loac>img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	border-radius: 50%;
+}
+
+
+.qdl_loac>img:nth-child(2){
+	margin: 0 50px;
+}

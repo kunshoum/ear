@@ -252,7 +252,20 @@
 		</div> 
 	</div>
 	<div class="wym_alertBox"></div>
+	<audio id="mp3"src="../music/笑傲江湖曲.mp3" autoplay="autoplay" loop="10"></audio>
+	
 	<script src="../javascripts/swiper.min.js"></script>
 	<script src="../javascripts/wym.js"></script>
+	<script>	
+	//自动背景音乐，带缓存
+	  if (sessionStorage.nowTime) {
+        mp3.currentTime = sessionStorage.nowTime
+        mp3.play()
+       }
+        mp3.addEventListener('timeupdate', function (e) {
+        sessionStorage.nowTime = mp3.currentTime;
+    })
+
+    </script>
 </body>
 </html>

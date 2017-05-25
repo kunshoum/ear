@@ -252,3 +252,21 @@ body{
 .register-in:active {
     box-shadow: inset 2px 1px 2px 3px rgba(0, 0, 0, 0.075);
 }
+
+
+
+/* 秦 */
+
+
+.qdl_banner_user{
+    width: 80%;
+    height: 30px;
+    /*border:1px solid red;*/
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #888;
+    text-indent:20px;
+}
+.qdl_banner_user>a:nth-child(2){
+    margin-left: 20px;
+}

@@ -1,0 +1,22 @@
+ .wym_alertBox{
+	position: fixed;
+	width: 400px;
+	height: 300px;
+	background: #4599CE;
+	left: 50%;
+	top: 30%;
+	margin: -5% -15%;
+	border-radius: 10px;
+	opacity: .7;
+	color:#000;
+	text-align: center;
+	line-height: 300px;
+	font-size: 20px;
+	font-weight: bold;
+	display: none;
+	box-shadow: 5px 5px 5px #e9e9e9;
+
+}
+.qdl_button{
+	cursor: pointer;	
+}

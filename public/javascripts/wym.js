@@ -2,44 +2,6 @@
  * Created by 联想 on 2017/2/21.
  */
 var blow = document.querySelector(".in")
-
-/*
-var w = 8; //横着
-var h = 5;  //竖着
-for (var i = 0; i < h; i++) {
-    for (var j = 0; j < w; j++) {
-        var oDiv = document.createElement('div');
-        oDiv.style.width = blow.offsetWidth / w + 'px';
-        oDiv.style.height = blow.offsetHeight / h + 'px';
-        oDiv.style.float = 'left';
-        oDiv.style.background = 'url(images/1.png)';
-        oDiv.style.backgroundPositionX = -j * (blow.offsetWidth / w) + 'px';
-        oDiv.style.backgroundPositionY = -i * (blow.offsetHeight / h) + 'px';
-        oDiv.style.transition = '2s .5s';
-        blow.appendChild(oDiv);
-    }
-}
-var onAll = blow.children;
- function random(min, max) {
- return parseInt(min + Math.random() * (max - min));
- }
-for(var i = 0;i < onAll.length;i++){
-    onAll[i].style.transform='perspective(800px)' +
-        ' rotateX('+random(-270,270)+'deg) rotateY('+random(-270,270)+'deg)  ' +
-        'translateX('+random(-600,600)+'px) translateY('+random(-600,600)+'px)';
-    onAll[i].style.opacity=0;
-};
-setTimeout(function(){
-    for(var i = 0;i < onAll.length;i++){
-        onAll[i].style.transform='perspective(800px)' +
-            ' rotateX(0deg) rotateY(0deg)  ' +
-            'translateX(0px) translateY(0px)';
-        onAll[i].style.opacity=1;
-    }
-},1800);
-*/
-// 单张爆炸结束
-
 var index = 0,imgIndex = 0,z = 1000;
 var arr = ['../images/banner1.jpg','../images/banner2.jpg','../images/banner3.jpg','../images/banner4.jpg','../images/banner5.jpg'];
 fly();
@@ -62,6 +24,7 @@ function fly() {
             oDiv.style.backgroundPositionX = -j * (blow.offsetWidth / w) + 'px';
             oDiv.style.backgroundPositionY = -i * (blow.offsetHeight / h) + 'px';
             oDiv.style.transition = '2s .5s';
+            oDiv.style.backgroundSize=blow.offsetWidth+'px'+' '+blow.offsetHeight+'px';
 
             document.getElementById('new' + (index - 1)).appendChild(oDiv);
         }
@@ -151,6 +114,52 @@ $(function() {
 $(".publish").click(function(){
     $(".syb_Bbox").css("display","block")
 })
+//all
+var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        autoplay:1500
+      })    
 
 
+      var qld_gengduo=document.querySelector('.qld_gengduo');//
+      var qdl_banner_right_text=document.querySelector('.qdl_banner_right_text');//
+      var on=true;
+      qld_gengduo.onclick=function(){//
+        if(on){
+            qdl_banner_right_text.style.height='auto';
+            
+            this.innerText='收起>>';
+            on=false;
+        }else{
+            qdl_banner_right_text.style.height='75px';
+            this.innerText='显示全文>>';
+            on=true;
+        }
+        
+      }
 
+//-----
+
+//send
+// var _txt=$(".content").val()
+$(".qdl_button").click(function(){
+// if(_txt.length<=1){
+//     var AlertBox=$(".wym_alertBox")
+//     AlertBox.html("要发送有价值的邮件喔~")
+//     AlertBox.css("display","block")
+//     setTimeout(function(){
+//           AlertBox.css("display","none")
+//     },1500)
+// }else{
+    var AlertBox=$(".wym_alertBox")
+    AlertBox.html("我们收到邮件后会为您处理喔(⊙o⊙)~")
+    AlertBox.css("display","block")
+    setTimeout(function(){
+          AlertBox.css("display","none")
+    },1500)
+//}
+})
